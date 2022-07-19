@@ -1,0 +1,10 @@
+[package]
+name = "bone"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+deno_core = "0.143.0"
+gflags = "0.3.11"
