@@ -83,7 +83,11 @@ async fn main() -> Result<(), AnyError> {
     worker.execute_main_module(&main_module).await?;
     worker.run_event_loop(false).await?;
   } else {
-    //help
+    println!("BONE
+  A basic light weight javascript runtime wrriten in rust.
+    
+  Usage:
+    -f, -i, --file, --input      input js file (no typescript)")
   }
   Ok(())
 }
