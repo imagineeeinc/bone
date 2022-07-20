@@ -29,10 +29,10 @@ async fn main() -> Result<(), AnyError> {
   if args.len() >= 1 {
     let module_loader = Rc::new(FsModuleLoader);
     let create_web_worker_cb = Arc::new(|_| {
-      todo!("Web workers are not supported in the example");
+      todo!("Web workers are not supported");
     });
     let web_worker_preload_module_cb = Arc::new(|_| {
-      todo!("Web workers are not supported in the example");
+      todo!("Web workers are not supported");
     });
 
     let options = WorkerOptions {
@@ -44,10 +44,10 @@ async fn main() -> Result<(), AnyError> {
         location: None,
         no_color: false,
         is_tty: false,
-        runtime_version: "x".to_string(),
+        runtime_version: env!("CARGO_PKG_VERSION").to_string(),
         ts_version: "x".to_string(),
         unstable: false,
-        user_agent: "hello_runtime".to_string(),
+        user_agent: "bone runtime".to_string(),
       },
       extensions: vec![],
       unsafely_ignore_certificate_errors: None,
@@ -83,11 +83,11 @@ async fn main() -> Result<(), AnyError> {
     worker.execute_main_module(&main_module).await?;
     worker.run_event_loop(false).await?;
   } else {
-    println!("BONE
+    println!("BONE v{}
   A basic light weight javascript runtime wrriten in rust.
     
   Usage:
-    -f, -i, --file, --input      input js file (no typescript)")
+    -f, -i, --file, --input      input js file (no typescript)", env!("CARGO_PKG_VERSION"));
   }
   Ok(())
 }
