@@ -30,13 +30,13 @@ fn main() {
   if args.len() >= 1 {
     let code = fs::read_to_string(args[0])
     .expect("Something went wrong reading the file");
-    runtime(code);
+    runtime(code, args[0]);
   } else {
     //help
   }
   
 }
-fn runtime(code: String) {
+fn runtime(code: String, name: &str) {
   // Build a deno_core::Extension providing custom ops
   let ext = Extension::builder()
     .ops(vec![
@@ -58,7 +58,7 @@ fn runtime(code: String) {
   // You can find its definition in core.js.
   runtime
     .execute_script(
-      "<usage>",
+      name,
       &code,
     )
     .unwrap();
