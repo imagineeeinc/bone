@@ -1,1 +1,1 @@
-Deno.core.print("Hello!\n")
+console.log("Hello!\n")

@@ -8,3 +8,5 @@ edition = "2021"
 [dependencies]
 deno_core = "0.143.0"
 gflags = "0.3.11"
+deno_runtime = "0.69.0"
+tokio = { version = "1.20.0", features = ["full"] }
