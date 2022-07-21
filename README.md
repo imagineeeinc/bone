@@ -2,7 +2,7 @@
   <img src="./bone.png" width="30%">
 </p>
 <h1 align="center">Bone</h1>
-<h3 align="center">🦴A super light, toy Javascript runtime based on deno🦴</h3>
+<h3 align="center">🦴A super light, toy Javascript runtime🦴</h3>
 
 Bone is a bare "*bones*" **javascript runtime** based on the deno runtime.
 
