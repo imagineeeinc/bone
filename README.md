@@ -29,6 +29,10 @@ cargo run -- -i examples/hello.js
 cargo build --release
 ```
 
+<h2 align="center">Educational</h2>
+
+This project is mainly an experiment and for educational purposes, on how to use js in your rust project easily. The main branch is using the `Deno runtime` module that means it has browser api like console log and fetch and it also means the runtime is using the `std` if you are planning on using deno in a `no std` enviornment, checkout the [deno_core branch](https://github.com/imagineeeinc/bone/tree/deno_core)
+
 <h2 align="center">License</h2>
 
 This project is under [MIT License](https://github.com/imagineeeinc/bone/blob/main/LICENSE)
